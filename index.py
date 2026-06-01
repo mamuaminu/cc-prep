@@ -859,23 +859,260 @@ QUESTIONS = [
             "D) Replacing actual DR drills"
         ],
         "answer": 1, "explanation": "Tabletop exercise = theoretical walkthrough of an incident scenario. Team discusses their response, identifies gaps in plans, improves coordination. Low cost, no disruption. Complement with functional exercises."
+    },
+    # ═══════════════════════════════════════════════════════
+    # NEW QUESTIONS 79-100 — aligned to CC 2025 exam outline
+    # ═══════════════════════════════════════════════════════
+    {
+        "id": 79, "domain": "Security Principles", "weight": "26%",
+        "q": "An employee receives an email from the CEO asking to urgently wire money to a new vendor. This is an example of what type of attack?",
+        "options": [
+            "A) Malware infection",
+            "B) Business Email Compromise (BEC) / CEO fraud",
+            "C) SQL Injection",
+            "D) DDoS attack"
+        ],
+        "answer": 1, "explanation": "BEC = attacker impersonates an executive to trick employees into transferring money or sensitive data. Very costly attack. Verify unusual requests via secondary channel."
+    },
+    {
+        "id": 80, "domain": "Security Principles", "weight": "26%",
+        "q": "What is the difference between a policy, a standard, a procedure, and a guideline?",
+        "options": [
+            "A) They are all the same thing",
+            "B) Policy = high-level mandatory rule; Standard = specific quantitative requirement; Procedure = step-by-step instructions; Guideline = recommended best practice (non-mandatory)",
+            "C) Policy is optional, guideline is mandatory",
+            "D) Procedure is written by the CEO, policy by IT staff"
+        ],
+        "answer": 1, "explanation": "Policy = what you must do (mandatory, management-level). Standard = quantitative benchmark (e.g., password must be 12 chars). Procedure = detailed steps to accomplish a task. Guideline = flexible recommendation. Know the difference for the exam."
+    },
+    {
+        "id": 81, "domain": "Security Principles", "weight": "26%",
+        "q": "Which type of attack uses voice calls to trick someone into revealing sensitive information?",
+        "options": [
+            "A) Phishing",
+            "B) Vishing (Voice Phishing)",
+            "C) Smishing (SMS Phishing)",
+            "D) Whaling"
+        ],
+        "answer": 1, "explanation": "Vishing = voice-based phishing (phone call). Smishing = SMS phishing. Phishing = generic email-based. Whaling = phishing targeting high-profile executives (CEO/CFO)."
+    },
+    {
+        "id": 82, "domain": "Security Principles", "weight": "26%",
+        "q": "What is 'Risk Transference' in risk management?",
+        "options": [
+            "A) Moving risk to another department",
+            "B) Shifting the financial impact of a risk to another party (e.g., buying cyber insurance or outsourcing to a vendor)",
+            "C) Ignoring the risk",
+            "D) Accepting the risk"
+        ],
+        "answer": 1, "explanation": "Risk transference = moving the cost of a risk to a third party. Cyber insurance is the most common example. Risk acceptance = accepting the risk as is. Risk avoidance = not doing the risky activity."
+    },
+    {
+        "id": 83, "domain": "Security Principles", "weight": "26%",
+        "q": "What is 'AI washing' in cybersecurity?",
+        "options": [
+            "A) Using AI to wash data",
+            "B) Overstating or falsely claiming a product uses AI capabilities for marketing purposes",
+            "C) Training AI models on washing machines",
+            "D) Using AI to bypass security controls"
+        ],
+        "answer": 1, "explanation": "AI washing = false or exaggerated AI claims by vendors. In CC 2025 outline, AI concepts are integrated across all domains. Security pros must evaluate AI security claims critically."
+    },
+    {
+        "id": 84, "domain": "Security Principles", "weight": "26%",
+        "q": "Which ISC2 Code of Ethics canon states 'Protect society, the common good, necessary public trust and confidence in the profession'?",
+        "options": [
+            "A) Act honorably, honestly, justly, responsibly, and legally",
+            "B) Protect society, the common good, necessary public trust and confidence, and the profession",
+            "C) Provide diligent and competent service to principals",
+            "D) Advance and protect the profession"
+        ],
+        "answer": 1, "explanation": "The four ISC2 Code of Ethics canons: 1) Protect society/commongood/public trust (the 'why' of cybersecurity). 2) Act honorably/justly/responsibly. 3) Provide diligent service to principals. 4) Advance and protect the profession."
+    },
+    {
+        "id": 85, "domain": "Access Controls", "weight": "22%",
+        "q": "What is the correct order of the AAA framework?",
+        "options": [
+            "A) Authentication, Authorization, Accountability",
+            "B) Authorization, Authentication, Accountability",
+            "C) Accountability, Authentication, Authorization",
+            "D) Authentication, Accountability, Authorization"
+        ],
+        "answer": 0, "explanation": "AAA = Authentication (who are you?) → Authorization (what can you do?) → Accountability (logging actions to prove it). Each builds on the previous."
+    },
+    {
+        "id": 86, "domain": "Access Controls", "weight": "22%",
+        "q": "What is 'Kerberos' used for in network authentication?",
+        "options": [
+            "A) Encrypting files at rest",
+            "B) A ticket-based authentication protocol that uses symmetric cryptography to authenticate users without transmitting passwords over the network",
+            "C) Firewall rule management",
+            "D) Domain name resolution"
+        ],
+        "answer": 1, "explanation": "Kerberos = ticket-based authentication protocol (Windows Active Directory). Uses symmetric cryptography, avoids sending plaintext passwords. Tickets expire and are time-limited. KDC (Key Distribution Center) issues tickets."
+    },
+    {
+        "id": 87, "domain": "Access Controls", "weight": "22%",
+        "q": "What does RBAC (Role-Based Access Control) use to determine access rights?",
+        "options": [
+            "A) User's personal identity",
+            "B) The job function/role assigned to a user within the organization",
+            "C) The time of day",
+            "D) The IP address of the user's device"
+        ],
+        "answer": 1, "explanation": "RBAC = access rights based on organizational roles (e.g., 'Accountant', 'HR Manager'). Permissions are assigned to roles, not individuals. Reduces administrative overhead vs. Discretionary Access Control (DAC)."
+    },
+    {
+        "id": 88, "domain": "Access Controls", "weight": "22%",
+        "q": "What is 'Multi-Factor Authentication' (MFA)?",
+        "options": [
+            "A) Using two different passwords",
+            "B) Requiring two or more different types of verification factors (something you know, have, and/or are)",
+            "C) Logging in from two different devices",
+            "D) Two people approving the same action"
+        ],
+        "answer": 1, "explanation": "MFA requires 2+ factor types: Something you KNOW (password), Something you HAVE (token/smartphone), Something you ARE (biometric). Two passwords = not MFA. Authenticator apps and hardware tokens are common 'have' factors."
+    },
+    {
+        "id": 89, "domain": "Access Controls", "weight": "22%",
+        "q": "What is 'Least Privilege' also known as?",
+        "options": [
+            "A) Maximum privilege",
+            "B) Need-to-Know / Need-to-Know principle",
+            "C) Open access policy",
+            "D) Default allow"
+        ],
+        "answer": 1, "explanation": "Least Privilege = users get only the minimum access needed. Closely related to Need-to-Know (restrict access to only what is required for a specific task/function). Both are fundamental access control principles."
+    },
+    {
+        "id": 90, "domain": "Access Controls", "weight": "22%",
+        "q": "What does 'Accountability' mean in access control?",
+        "options": [
+            "A) Users can access anything they want",
+            "B) Users are responsible for their actions — logging and auditing enable traceability back to the individual",
+            "C) The system automatically blocks unauthorized access",
+            "D) All users share one account"
+        ],
+        "answer": 1, "explanation": "Accountability = ability to trace actions back to a specific person. Achieved through logs, audit trails, unique user IDs. Even with proper authorization, organizations need accountability to detect misuse. This is the final step in the AAA framework."
+    },
+    {
+        "id": 91, "domain": "Network Security", "weight": "24%",
+        "q": "What is an 'Advanced Persistent Threat' (APT)?",
+        "options": [
+            "A) A simple virus that spreads quickly",
+            "B) A long-term, stealthy attack where an intruder maintains access to a network to steal data over an extended period",
+            "C) A type of DDoS attack",
+            "D) A phishing email"
+        ],
+        "answer": 1, "explanation": "APT = sophisticated, long-duration attack by well-funded threat actors (nation-states, criminal groups). Goal: maintain foothold, exfiltrate data slowly. Hard to detect because they use legitimate credentials and blend with normal traffic."
+    },
+    {
+        "id": 92, "domain": "Network Security", "weight": "24%",
+        "q": "What does a 'mantrap' (or mantrap portal) prevent in physical security?",
+        "options": [
+            "A) Unauthorized tailgating — a person follows an authorized person into a secured area without credentials",
+            "B) DDoS attacks",
+            "C) SQL injection",
+            "D) Phishing attacks"
+        ],
+        "answer": 0, "explanation": "Mantrap = small space between two doors. One door closes before the next opens. Prevents tailgating/piggybacking (unauthorized person following authorized person in). Combined with badge readers and anti-tailgating measures."
+    },
+    {
+        "id": 93, "domain": "Network Security", "weight": "24%",
+        "q": "What is 'Deep Packet Inspection' (DPI)?",
+        "options": [
+            "A) Inspecting only packet headers",
+            "B) Examining the full payload content of network packets to detect threats, protocols, or data within traffic",
+            "C) Blocking all packets from a specific IP",
+            "D) A type of firewall that only looks at the destination IP"
+        ],
+        "answer": 1, "explanation": "DPI = examines data payload (not just headers) of packets. Can detect application-layer threats, malware, data exfiltration. Used in advanced firewalls and IDS/IPS. Standard firewalls only check headers."
+    },
+    {
+        "id": 94, "domain": "Network Security", "weight": "24%",
+        "q": "What port does SSH use by default?",
+        "options": [
+            "A) 21",
+            "B) 23",
+            "C) 22",
+            "D) 25"
+        ],
+        "answer": 2, "explanation": "SSH = port 22 (secure remote access, replaces Telnet port 23). FTP = 21. SMTP = 25. HTTPS = 443. HTTP = 80. Remember secure versions typically use +1 or +443 offset from insecure versions."
+    },
+    {
+        "id": 95, "domain": "Network Security", "weight": "24%",
+        "q": "What is a 'Security Zone' in network architecture?",
+        "options": [
+            "A) A physical fence",
+            "B) A logical grouping of network devices and resources that share similar security requirements and trust levels",
+            "C) A single server",
+            "D) A type of encryption"
+        ],
+        "answer": 1, "explanation": "Security zones = logical divisions of a network with common security policies (e.g., internal zone, DMZ, guest zone). Devices in the same zone have similar trust levels. Zones are separated by firewalls. Zero Trust uses micro-segmentation for finer control."
+    },
+    {
+        "id": 96, "domain": "Security Operations", "weight": "18%",
+        "q": "What is 'Log Correlation' in security monitoring?",
+        "options": [
+            "A) Looking at a single log at a time",
+            "B) Combining and analyzing events from multiple log sources to identify patterns that indicate an attack",
+            "C) Deleting logs to save space",
+            "D) Only storing logs from firewalls"
+        ],
+        "answer": 1, "explanation": "Log correlation = combining events from multiple sources (firewalls, servers, endpoints, apps) to build a complete picture of an attack. SIEM tools automate this. A single failed login might be normal; 50 failed logins across 10 systems in 2 minutes = suspicious."
+    },
+    {
+        "id": 97, "domain": "Security Operations", "weight": "18%",
+        "q": "What is the purpose of 'Security Awareness Training'?",
+        "options": [
+            "A) To meet compliance requirements only",
+            "B) To educate employees about threats (phishing, social engineering) and their role in protecting the organization",
+            "C) To test employees and punish failures",
+            "D) Only required for IT staff"
+        ],
+        "answer": 1, "explanation": "Security awareness training = regular education for ALL employees (not just IT). Covers phishing, social engineering, password hygiene, data handling, incident reporting. Reduces risk from human error (still the #1 cause of breaches). Should include simulated phishing tests."
+    },
+    {
+        "id": 98, "domain": "Security Operations", "weight": "18%",
+        "q": "What does 'Configuration Management' ensure in security operations?",
+        "options": [
+            "A) That systems are always running",
+            "B) That systems are configured according to approved security baselines and changes are documented and controlled",
+            "C) That software is always up to date",
+            "D) That passwords are changed weekly"
+        ],
+        "answer": 1, "explanation": "Configuration management = tracking and controlling system configurations over time. Ensures systems stay in a known, secure state. Changes must be documented, tested, and approved. Drift from baseline = risk. Tools like SCCM, Puppet, Ansible automate this."
+    },
+    {
+        "id": 99, "domain": "Security Operations", "weight": "18%",
+        "q": "What is the difference between a 'Symmetric' and 'Asymmetric' encryption algorithm?",
+        "options": [
+            "A) They are the same",
+            "B) Symmetric uses one key for both encrypt/decrypt (faster); Asymmetric uses a key pair (public/private) — slower but enables digital signatures and key exchange",
+            "C) Asymmetric is faster",
+            "D) Symmetric is only used for hashing"
+        ],
+        "answer": 1, "explanation": "Symmetric = one secret key for both parties (AES, DES). Fast, but key exchange is hard. Asymmetric = key pair (RSA, ECC). Slower, but solves key distribution problem. Hybrid: asymmetric to exchange symmetric session key, then symmetric for bulk data."
+    },
+    {
+        "id": 100, "domain": "Business Continuity & Disaster Recovery", "weight": "10%",
+        "q": "What is the difference between a Business Continuity Plan (BCP) and a Disaster Recovery Plan (DRP)?",
+        "options": [
+            "A) They are the same",
+            "B) BCP = keeping business operations running during a disruption (people, processes); DRP = restoring IT systems and infrastructure after a disaster",
+            "C) DRP is more comprehensive",
+            "D) BCP only covers physical assets"
+        ],
+        "answer": 1, "explanation": "BCP = overarching plan to keep the business running (all business functions, not just IT). DRP = focused on recovering IT systems, data, and infrastructure after a disaster. BCP is strategic; DRP is tactical/technical. Both should be tested regularly."
     }
 ]
 
 DOMAINS = {
-    "Security Principles":          {"weight": "15%", "count": 5},
-    "Asset Security":               {"weight": "10%", "count": 3},
-    "Security Architecture":        {"weight": "16%", "count": 5},
-    "Network Security":             {"weight": "16%", "count": 16},
-    "Cloud Security":              {"weight": "10%", "count": 4},
-    "Cryptography":                {"weight": "10%", "count": 4},
-    "Governance, Risk & Compliance":{"weight": "17%", "count": 3},
-    "Security Operations":          {"weight": "20%", "count": 5},
-    "Access Controls":             {"weight": "17%", "count": 4},
-    "Identity & Access Management":{"weight": "15%", "count": 4},
-    "Security Assessment & Testing":{"weight": "11%", "count": 3},
-    "Incident Response":           {"weight": "13%", "count": 3},
-    "Business Continuity & DR":    {"weight": "15%", "count": 4},
+    "Security Principles":          {"weight": "26%", "count": 8},
+    "Access Controls":             {"weight": "22%", "count": 6},
+    "Network Security":             {"weight": "24%", "count": 9},
+    "Security Operations":          {"weight": "18%", "count": 5},
+    "Business Continuity & DR":    {"weight": "10%", "count": 4},
 }
 
 def load_progress():
@@ -892,18 +1129,15 @@ def show_outline():
     print("""
 ╔══════════════════════════════════════════════════════════════╗
 ║           ISC2 Certified in Cybersecurity (CC)              ║
-║                  Exam Domain Outline                        ║
+║              Exam Domain Outline (Effective Oct 2025)        ║
 ╠══════════════════════════════════════════════════════════════╣
-║ Domain 1: Security Principles              — 15% (2-3 Qs)    ║
-║ Domain 2: Asset Security                  — 10% (1-2 Qs)    ║
-║ Domain 3: Security Architecture           — 16% (3-4 Qs)    ║
-║ Domain 4: Communication & Network Security— 16% (3-4 Qs)    ║
-║ Domain 5: Identity & Access Management    — 15% (2-3 Qs)    ║
-║ Domain 6: Security Assessment & Testing   — 11% (2-3 Qs)    ║
-║ Domain 7: Incident Response               — 13% (2-3 Qs)    ║
-║ Domain 8: Business Continuity & DR        — 10% (1-2 Qs)    ║
+║ Domain 1: Security Principles                    — 26%       ║
+║ Domain 2: Access Controls Concepts              — 22%       ║
+║ Domain 3: Network Security                      — 24%       ║
+║ Domain 4: Security Operations                    — 18%       ║
+║ Domain 5: BC/DR & Incident Response Concepts    — 10%       ║
 ╠══════════════════════════════════════════════════════════════╣
-║ Total: 100 questions | 2 hours | Passing score: ~700/1000   ║
+║ Total: 100 questions | 2 hours | Passing: 700/1000 (CAT)   ║
 ╚══════════════════════════════════════════════════════════════╝
 """)
     for domain, info in DOMAINS.items():
