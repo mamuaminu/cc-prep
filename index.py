@@ -441,17 +441,441 @@ QUESTIONS = [
         ],
         "answer": 1, "explanation": "WAF = Web Application Firewall. Filters and monitors HTTP traffic to/from web apps, blocks SQLi, XSS, and other app-layer attacks."
     },
+    # Additional questions — Network Security & more
+    {
+        "id": 41, "domain": "Network Security", "weight": "16%",
+        "q": "What is the primary function of a Router?",
+        "options": [
+            "A) Broadcast data to all connected devices",
+            "B) Forward data packets between different networks based on IP addresses",
+            "C) Filter traffic within the same subnet",
+            "D) Assign IP addresses to clients"
+        ],
+        "answer": 1, "explanation": "Routers forward packets between different networks based on IP address routing tables. Switches forward within a LAN; hubs broadcast."
+    },
+    {
+        "id": 42, "domain": "Network Security", "weight": "16%",
+        "q": "What is the difference between a Layer 2 Switch and a Layer 3 Switch?",
+        "options": [
+            "A) Layer 2 switches only support Wi-Fi",
+            "B) Layer 2 switches use MAC addresses; Layer 3 switches can route based on IP addresses (like a router)",
+            "C) They are identical",
+            "D) Layer 3 switches are slower"
+        ],
+        "answer": 1, "explanation": "Layer 2 = MAC address switching (same network). Layer 3 = can route between subnets using IP addresses. Layer 3 switches combine switch + router functions."
+    },
+    {
+        "id": 43, "domain": "Network Security", "weight": "16%",
+        "q": "What does NAT (Network Address Translation) do?",
+        "options": [
+            "A) Translates domain names to IP addresses",
+            "B) Maps private IP addresses to a public IP address to allow internet access while hiding internal IPs",
+            "C) Blocks all inbound traffic",
+            "D) Encrypts network traffic"
+        ],
+        "answer": 1, "explanation": "NAT maps private internal IPs to a single (or few) public IP(s) for internet access. Also provides a layer of security by hiding internal network topology."
+    },
+    {
+        "id": 44, "domain": "Network Security", "weight": "16%",
+        "q": "What is a VLAN and why is it used?",
+        "options": [
+            "A) A type of virus",
+            "B) Virtual LAN — logically separates devices on the same physical network without requiring separate infrastructure",
+            "C) A backup storage method",
+            "D) A WAN connection protocol"
+        ],
+        "answer": 1, "explanation": "VLAN = Virtual LAN. Groups devices logically by function or department, not physical location. Improves performance and security by isolating broadcast domains."
+    },
+    {
+        "id": 45, "domain": "Network Security", "weight": "16%",
+        "q": "What port does DNS use?",
+        "options": [
+            "A) 25",
+            "B) 53",
+            "C) 443",
+            "D) 110"
+        ],
+        "answer": 1, "explanation": "DNS uses port 53 (both TCP and UDP). DHCP = 67/68. HTTP = 80. HTTPS = 443. FTP = 21."
+    },
+    {
+        "id": 46, "domain": "Network Security", "weight": "16%",
+        "q": "What is the OSI layer for the Transport layer?",
+        "options": [
+            "A) Layer 1",
+            "B) Layer 2",
+            "C) Layer 4",
+            "D) Layer 7"
+        ],
+        "answer": 2, "explanation": "Layer 4 = Transport. Responsible for end-to-end communication, reliability, flow control, and segmentation/desegmentation. TCP & UDP operate here."
+    },
+    {
+        "id": 47, "domain": "Network Security", "weight": "16%",
+        "q": "What is the main difference between TCP and UDP?",
+        "options": [
+            "A) TCP is faster than UDP",
+            "B) TCP is connection-oriented with error checking; UDP is connectionless and faster but without guarantees",
+            "C) They are the same",
+            "D) UDP is used for web browsing, TCP for video streaming"
+        ],
+        "answer": 1, "explanation": "TCP = connection-oriented, reliable, ordered delivery, error correction. UDP = connectionless, no guarantee of delivery, lower overhead. TCP for web/email; UDP for video/DNS."
+    },
+    {
+        "id": 48, "domain": "Network Security", "weight": "16%",
+        "q": "What is an Intrusion Prevention System (IPS)?",
+        "options": [
+            "A) A type of antivirus",
+            "B) Actively blocks and prevents detected attacks in addition to monitoring and alerting",
+            "C) A backup system",
+            "D) A firewall that only logs traffic"
+        ],
+        "answer": 1, "explanation": "IPS = actively blocks malicious traffic after detecting it (inline). IDS = passive monitoring and alerting only. IPS can stop threats in real-time."
+    },
+    {
+        "id": 49, "domain": "Network Security", "weight": "16%",
+        "q": "What is the OSI layer that Encrypted Traffic operates at?",
+        "options": [
+            "A) Layer 1",
+            "B) Layer 3",
+            "C) Layer 6",
+            "D) TLS/SSL operates at Layer 5-6 but encryption can span multiple layers"
+        ],
+        "answer": 3, "explanation": "TLS/SSL encrypts data at the Presentation layer (Layer 6). However, TLS tunnels can carry any application-layer traffic. Know which layer your encryption lives at."
+    },
+    {
+        "id": 50, "domain": "Network Security", "weight": "16%",
+        "q": "What is a 'Zero Trust' security model?",
+        "options": [
+            "A) Trust all internal traffic by default",
+            "B) Never trust any user or device by default — always verify, regardless of location (inside or outside the network perimeter)",
+            "C) Only trust devices on the local network",
+            "D) Disable all firewalls"
+        ],
+        "answer": 1, "explanation": "Zero Trust = 'never trust, always verify.' Every user, device, and connection must be authenticated and authorized before accessing resources, regardless of network location."
+    },
+    {
+        "id": 51, "domain": "Network Security", "weight": "16%",
+        "q": "What does a proxy server provide?",
+        "options": [
+            "A) Direct connection to the internet",
+            "B) Acts as an intermediary — caches content, filters requests, hides client IPs, and can enforce security policies",
+            "C) Increases network bandwidth",
+            "D) Automatically encrypts all traffic"
+        ],
+        "answer": 1, "explanation": "Proxy server = intermediary between clients and the internet. Can cache files (faster access), filter content, hide internal IPs, log user activity, and enforce security policies."
+    },
+    {
+        "id": 52, "domain": "Network Security", "weight": "16%",
+        "q": "What is the difference between a hub and a switch?",
+        "options": [
+            "A) Same thing",
+            "B) Hub broadcasts to all ports; Switch sends data only to the intended destination device based on MAC address",
+            "C) Switch is slower than hub",
+            "D) Hub is more secure"
+        ],
+        "answer": 1, "explanation": "Hub = broadcasts all data to every device (shared media, no intelligence). Switch = learns MAC addresses and forwards data only to the correct port (reduced collisions, better security)."
+    },
+    {
+        "id": 53, "domain": "Network Security", "weight": "16%",
+        "q": "What type of attack floods a network with traffic to make it unavailable?",
+        "options": [
+            "A) Phishing",
+            "B) DDoS — Distributed Denial of Service",
+            "C) SQL Injection",
+            "D) Social Engineering"
+        ],
+        "answer": 1, "explanation": "DDoS = Distributed Denial of Service. Multiple compromised systems (botnet) flood a target with traffic to overwhelm it and make services unavailable."
+    },
+    {
+        "id": 54, "domain": "Network Security", "weight": "16%",
+        "q": "What is the main security concern with public Wi-Fi networks?",
+        "options": [
+            "A) They are always encrypted",
+            "B) Traffic can be intercepted by nearby attackers (man-in-the-middle); use VPN to protect",
+            "C) They are faster than wired networks",
+            "D) They are only available in coffee shops"
+        ],
+        "answer": 1, "explanation": "Public Wi-Fi is typically unencrypted. Attackers on the same network can intercept traffic (packet sniffing/MITM). Always use a VPN on public Wi-Fi to encrypt your traffic."
+    },
+    {
+        "id": 55, "domain": "Network Security", "weight": "16%",
+        "q": "What is the OSI layer for the Application layer?",
+        "options": [
+            "A) Layer 1",
+            "B) Layer 3",
+            "C) Layer 7",
+            "D) Layer 5"
+        ],
+        "answer": 2, "explanation": "Layer 7 = Application layer (OSI). This is where user-facing applications like HTTP, FTP, SMTP, DNS operate. Note: 'Application' here is not the end-user app itself but the network protocol."
+    },
+    {
+        "id": 56, "domain": "Network Security", "weight": "16%",
+        "q": "What does an SIEM tool integrate with to provide security monitoring?",
+        "options": [
+            "A) Firewalls only",
+            "B) Log sources across the environment — servers, firewalls, endpoints, applications",
+            "C) Only cloud services",
+            "D) HR systems"
+        ],
+        "answer": 1, "explanation": "SIEM aggregates and correlates logs from many sources (network devices, servers, endpoints, cloud). This gives security teams centralized visibility and the ability to detect threats across the entire infrastructure."
+    },
+    {
+        "id": 57, "domain": "Cloud Security", "weight": "10%",
+        "q": "What does 'IaaS' stand for?",
+        "options": [
+            "A) Internet as a Service",
+            "B) Infrastructure as a Service — provides virtualized computing resources over the internet",
+            "C) Internal as a Service",
+            "D) Integrated Application System"
+        ],
+        "answer": 1, "explanation": "IaaS = Infrastructure as a Service. Cloud provider offers virtual machines, storage, networking. Examples: AWS EC2, Azure VMs, Google Compute Engine. Customer manages OS and apps."
+    },
+    {
+        "id": 58, "domain": "Cloud Security", "weight": "10%",
+        "q": "In a SaaS model, who is responsible for data encryption?",
+        "options": [
+            "A) The customer only",
+            "B) The cloud provider handles encryption by default; customer is responsible for access control and data management",
+            "C) Neither",
+            "D) The government"
+        ],
+        "answer": 1, "explanation": "In SaaS (Software as a Service), the provider handles underlying infrastructure and encryption. Customer is responsible for their own data (access controls, sharing, classification). Shared responsibility model."
+    },
+    {
+        "id": 59, "domain": "Cloud Security", "weight": "10%",
+        "q": "What is a 'Security Group' in cloud computing?",
+        "options": [
+            "A) A team of security analysts",
+            "B) A virtual firewall that controls inbound/outbound traffic to cloud resources",
+            "C) A data encryption standard",
+            "D) A type of VPN"
+        ],
+        "answer": 1, "explanation": "Security Groups = virtual firewalls in cloud (AWS, Azure). They act as stateful packet filters controlling what traffic can enter or leave a group of instances. Default deny, you open what you need."
+    },
+    {
+        "id": 60, "domain": "Cloud Security", "weight": "10%",
+        "q": "What does 'Serverless' architecture (FaaS) mean?",
+        "options": [
+            "A) There are no servers involved",
+            "B) Code runs in ephemeral containers managed by the cloud provider — you only pay for execution time",
+            "C) Servers are removed from the network",
+            "D) The application runs without any code"
+        ],
+        "answer": 1, "explanation": "Serverless (Function as a Service) doesn't mean no servers — it means the cloud provider manages the infrastructure. You write functions that run on demand. AWS Lambda, Azure Functions. Cost = only when code runs."
+    },
+    {
+        "id": 61, "domain": "Cryptography", "weight": "10%",
+        "q": "What is the difference between hashing and encryption?",
+        "options": [
+            "A) Same thing",
+            "B) Hashing is one-way (can't be reversed); encryption is reversible with a key",
+            "C) Hashing is reversible",
+            "D) Encryption is one-way"
+        ],
+        "answer": 1, "explanation": "Hashing = one-way function, no key, produces fixed-length digest. Used for password storage. Encryption = reversible with key, used for confidentiality. Hash can't be reversed; encryption can."
+    },
+    {
+        "id": 62, "domain": "Cryptography", "weight": "10%",
+        "q": "What does 'Data at Rest' mean?",
+        "options": [
+            "A) Data being sent over a network",
+            "B) Data stored on disk, databases, backups — not actively moving",
+            "C) Data in RAM",
+            "D) Data being processed by a CPU"
+        ],
+        "answer": 1, "explanation": "Data at Rest = stored data (HDD, SSD, tape, database). Vulnerable to physical theft or unauthorized access. Protected by encryption at rest, access controls, and database security."
+    },
+    {
+        "id": 63, "domain": "Cryptography", "weight": "10%",
+        "q": "What is a 'Digital Certificate' (SSL/TLS certificate)?",
+        "options": [
+            "A) A software license key",
+            "B) A file that proves identity of a website using asymmetric cryptography, signed by a trusted Certificate Authority (CA)",
+            "C) A type of antivirus",
+            "D) An email address"
+        ],
+        "answer": 1, "explanation": "Digital certificate = binds a public key to an identity, signed by a trusted CA (like DigiCert, Let's Encrypt). Enables HTTPS by proving the server's identity. Browsers verify via the CA's root certificates."
+    },
+    {
+        "id": 64, "domain": "Cryptography", "weight": "10%",
+        "q": "What is the main use of a 'Digital Signature'?",
+        "options": [
+            "A) To encrypt all email",
+            "B) To prove authenticity and integrity of a message/document — sender is who they claim, content wasn't altered",
+            "C) To speed up network connections",
+            "D) To replace passwords"
+        ],
+        "answer": 1, "explanation": "Digital signature = proves sender authenticity and document integrity. Created with sender's private key, verified with their public key. Provides non-repudiation — sender can't deny signing."
+    },
+    {
+        "id": 65, "domain": "Governance, Risk & Compliance", "weight": "17%",
+        "q": "What does 'Regulation' mean in cybersecurity governance?",
+        "options": [
+            "A) A suggestion",
+            "B) A law or rule imposed by a governing body that organizations must legally follow",
+            "C) A technical control",
+            "D) Optional compliance"
+        ],
+        "answer": 1, "explanation": "Regulations = mandatory laws/rules (government or industry bodies). Examples: GDPR, HIPAA, PCI DSS, SOX. Non-compliance can result in fines and legal action."
+    },
+    {
+        "id": 66, "domain": "Governance, Risk & Compliance", "weight": "17%",
+        "q": "What is the difference between a 'Policy' and a 'Procedure'?",
+        "options": [
+            "A) Same thing",
+            "B) Policy = high-level rule/goal set by management; Procedure = detailed step-by-step instructions to implement the policy",
+            "C) Policy is for technical staff; Procedure is for management",
+            "D) Procedure is optional"
+        ],
+        "answer": 1, "explanation": "Policy = what you must do (the rule). Procedure = how you do it (step-by-step). Policy is 'all employees must use strong passwords.' Procedure is the specific steps to create and manage passwords."
+    },
+    {
+        "id": 67, "domain": "Governance, Risk & Compliance", "weight": "17%",
+        "q": "What is the purpose of a Security Audit?",
+        "options": [
+            "A) To test software",
+            "B) Independent review to evaluate if security controls, policies, and procedures are in place and effective",
+            "C) To install new firewalls",
+            "D) To hire security staff"
+        ],
+        "answer": 1, "explanation": "Security audit = systematic evaluation of an organization's security posture. Checks compliance with regulations, effectiveness of controls, identifies gaps. Can be internal or external."
+    },
+    {
+        "id": 68, "domain": "Security Operations", "weight": "20%",
+        "q": "What does 'Change Management' ensure in security operations?",
+        "options": [
+            "A) That no changes are ever made",
+            "B) That changes to systems/networks are documented, reviewed, tested, and approved before implementation to reduce risk",
+            "C) That changes happen instantly",
+            "D) That only management can make changes"
+        ],
+        "answer": 1, "explanation": "Change management = controlled process for requesting, reviewing, approving, and implementing changes. Prevents unintended disruptions and security gaps from uncontrolled changes to infrastructure."
+    },
+    {
+        "id": 69, "domain": "Security Operations", "weight": "20%",
+        "q": "What is the principle of 'Least Privilege' in security operations?",
+        "options": [
+            "A) Give users maximum access by default",
+            "B) Users and processes should have only the minimum access rights needed to perform their job function",
+            "C) Admins should always have full access",
+            "D) Passwords should never expire"
+        ],
+        "answer": 1, "explanation": "Least Privilege = only grant the minimum access needed. Reduces attack surface and damage from compromised accounts. Review access rights regularly and revoke when no longer needed."
+    },
+    {
+        "id": 70, "domain": "Security Operations", "weight": "20%",
+        "q": "What is the purpose of a 'Security Information and Event Management' (SIEM)?",
+        "options": [
+            "A) To block all network traffic",
+            "B) To aggregate, normalize, correlate, and analyze log data from multiple sources for real-time monitoring and threat detection",
+            "C) To send emails to users",
+            "D) To replace antivirus software"
+        ],
+        "answer": 1, "explanation": "SIEM provides centralized log collection and analysis. Helps detect threats in real-time by correlating events across firewalls, servers, endpoints, and applications. Also used for compliance reporting."
+    },
+    {
+        "id": 71, "domain": "Security Operations", "weight": "20%",
+        "q": "What is 'Vulnerability Management'?",
+        "options": [
+            "A) Ignoring known vulnerabilities",
+            "B) Continuous process of identifying, classifying, prioritizing, and remediating security vulnerabilities in systems and software",
+            "C) Only scanning once a year",
+            "D) Deleting vulnerable software"
+        ],
+        "answer": 1, "explanation": "Vulnerability management = ongoing cycle: scan → identify → assess severity → prioritize → remediate → verify. Not a one-time activity. Critical for reducing the attack surface proactively."
+    },
+    {
+        "id": 72, "domain": "Security Operations", "weight": "20%",
+        "q": "What does 'Hardening' a system mean?",
+        "options": [
+            "A) Making it physically stronger",
+            "B) Configuring a system securely by removing unnecessary services, disabling weak protocols, applying patches, and tightening configurations to reduce attack surface",
+            "C) Making the system run faster",
+            "D) Adding more software"
+        ],
+        "answer": 1, "explanation": "System hardening = removing attack surface by disabling unnecessary services/ports, applying patches, enforcing strong configs, removing default accounts, enabling auditing. CIS Benchmarks are common hardening guides."
+    },
+    {
+        "id": 73, "domain": "Access Controls", "weight": "17%",
+        "q": "What is 'Single Sign-On' (SSO)?",
+        "options": [
+            "A) Using one password for all accounts",
+            "B) Authentication mechanism where one login grants access to multiple related systems without re-entering credentials",
+            "C) Logging in from a single device",
+            "D) A type of encryption"
+        ],
+        "answer": 1, "explanation": "SSO = one authentication event grants access to multiple applications/systems. Improves UX and reduces password fatigue. Risk: if one account is compromised, multiple systems are exposed."
+    },
+    {
+        "id": 74, "domain": "Access Controls", "weight": "17%",
+        "q": "What does 'Federated Identity' mean?",
+        "options": [
+            "A) Using the same password everywhere",
+            "B) Sharing identity across separate organizations/trusted partners using a shared authentication protocol (SAML, OAuth)",
+            "C) Creating multiple local accounts",
+            "D) Storing passwords in a database"
+        ],
+        "answer": 1, "explanation": "Federated identity = users can access systems of different organizations with one set of credentials. Uses trust relationships and protocols like SAML or OAuth. Example: login with Google on a third-party app."
+    },
+    {
+        "id": 75, "domain": "Access Controls", "weight": "17%",
+        "q": "What is the access control concept of 'Need-to-Know'?",
+        "options": [
+            "A) Everyone needs to know everything",
+            "B) Users should only be granted access to data/resources necessary to perform their assigned tasks",
+            "C) All managers need to know all passwords",
+            "D) Access is granted by default"
+        ],
+        "answer": 1, "explanation": "Need-to-Know = restricts access to only the information required for a specific job function. Even if someone has clearance, they still only get access to what they need for their role. Complements Least Privilege."
+    },
+    {
+        "id": 76, "domain": "Access Controls", "weight": "17%",
+        "q": "What is 'Account Lifecycle Management'?",
+        "options": [
+            "A) Only creating accounts",
+            "B) Managing user accounts from creation through modification, suspension, and termination throughout their existence",
+            "C) Deleting all accounts annually",
+            "D) Giving everyone admin rights"
+        ],
+        "answer": 1, "explanation": "Account lifecycle = managing accounts from onboarding to role changes to offboarding. Includes provisioning, deprovisioning (timely removal of access when roles change or employment ends), and regular access reviews."
+    },
+    {
+        "id": 77, "domain": "Business Continuity & Disaster Recovery", "weight": "15%",
+        "q": "What is the difference between 'Hot Backup' and 'Cold Backup' sites?",
+        "options": [
+            "A) Temperature-based",
+            "B) Hot site = fully operational with real-time data replication, instant failover; Cold site = shell with infrastructure only, takes days to activate",
+            "C) Cold backup is better",
+            "D) They are the same"
+        ],
+        "answer": 1, "explanation": "Hot backup = fully equipped, real-time sync, ready to take over immediately (high cost). Cold backup = just space and basic infrastructure, needs time to become operational (lower cost). Warm site = middle ground."
+    },
+    {
+        "id": 78, "domain": "Business Continuity & Disaster Recovery", "weight": "15%",
+        "q": "What is a 'Tabletop Exercise' in BC/DR?",
+        "options": [
+            "A) Moving physical tablets around",
+            "B) A simulation where response team walks through a disaster scenario on paper to test plans without real-world impact",
+            "C) A type of backup",
+            "D) Replacing actual DR drills"
+        ],
+        "answer": 1, "explanation": "Tabletop exercise = theoretical walkthrough of an incident scenario. Team discusses their response, identifies gaps in plans, improves coordination. Low cost, no disruption. Complement with functional exercises."
+    }
 ]
 
 DOMAINS = {
     "Security Principles":          {"weight": "15%", "count": 5},
     "Asset Security":               {"weight": "10%", "count": 3},
     "Security Architecture":        {"weight": "16%", "count": 5},
-    "Communication & Network Security": {"weight": "16%", "count": 4},
-    "Identity & Access Management": {"weight": "15%", "count": 4},
-    "Security Assessment & Testing": {"weight": "11%", "count": 3},
-    "Incident Response":            {"weight": "13%", "count": 3},
-    "Business Continuity & Disaster Recovery": {"weight": "10%", "count": 4},
+    "Network Security":             {"weight": "16%", "count": 16},
+    "Cloud Security":              {"weight": "10%", "count": 4},
+    "Cryptography":                {"weight": "10%", "count": 4},
+    "Governance, Risk & Compliance":{"weight": "17%", "count": 3},
+    "Security Operations":          {"weight": "20%", "count": 5},
+    "Access Controls":             {"weight": "17%", "count": 4},
+    "Identity & Access Management":{"weight": "15%", "count": 4},
+    "Security Assessment & Testing":{"weight": "11%", "count": 3},
+    "Incident Response":           {"weight": "13%", "count": 3},
+    "Business Continuity & DR":    {"weight": "15%", "count": 4},
 }
 
 def load_progress():
